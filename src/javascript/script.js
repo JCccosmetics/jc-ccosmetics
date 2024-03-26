@@ -62,5 +62,6 @@ $(document).ready(function() {
     // Novo script para a funcionalidade de "curtir" nos corações
     $(".dish-heart").click(function() {
         $(this).toggleClass("heart-fixed");
+        $(this).find('i').toggleClass("fa-heart fa-heart-solid");
     });
 });
