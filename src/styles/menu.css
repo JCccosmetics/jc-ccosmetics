@@ -28,6 +28,12 @@
     overflow: hidden;
 }
 
+.dish-image {
+    max-width: 100%; /* Defina a largura máxima para 100% do contêiner pai */
+    height: auto; /* Mantenha a proporção original da imagem */
+}
+
+
 .dish-heart {
     position: absolute;
     background-color: var(--color-primary-6);
