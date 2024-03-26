@@ -59,8 +59,10 @@
 }
 
 #banner img {
-    height: 100%;
-    width: fit-content;
+    max-width: 80%; /* largura máxima */  
+    height: auto;
+    border-radius: 100%; /* Torna a imagem redonda */
+    padding-top: 20%;
 }
 
 .shape {
