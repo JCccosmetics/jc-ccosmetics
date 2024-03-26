@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // Script existente para o menu móvel e outras funcionalidades
     $('#mobile_btn').on('click', function () {
         $('#mobile_menu').toggleClass('active');
         $('#mobile_btn').find('i').toggleClass('fa-x');
@@ -57,4 +58,9 @@ $(document).ready(function() {
         duration: 1000,
         distance: '20%'
     })
+
+    // Novo script para a funcionalidade de "curtir" nos corações
+    $(".dish-heart").click(function() {
+        $(this).toggleClass("heart-fixed");
+    });
 });
