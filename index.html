@@ -265,10 +265,63 @@
                     </div>
                 </div>
 
-                <button class="btn-default">
+                <button class="btn-default" id="verMaisDepoimentos">
                     Ver mais depoimentos
                 </button>
-            </div>
+                
+                <div id="feedbacks">
+                    <!-- Depoimentos adicionais ocultos -->
+                    <div class="feedback hidden">
+                        <img src="src/images/avatar.png" class="feedback-avatar" alt="">
+                        <div class="feedback-content">
+                            <p>
+                                Ana Oliveira
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Os produtos da JC Cosmetics transformaram minha pele! Estou muito feliz com os resultados."
+                            </p>
+                        </div>
+                    </div>
+                
+                    <div class="feedback hidden">
+                        <img src="src/images/avatar.png" class="feedback-avatar" alt="">
+                        <div class="feedback-content">
+                            <p>
+                                Pedro Santos
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Incríveis produtos! Recomendo a todos que estão em busca de cuidados com a pele de alta qualidade."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    document.getElementById("verMaisDepoimentos").addEventListener("click", function() {
+                        var depoimentos = document.querySelectorAll('.feedback.hidden');
+                        depoimentos.forEach(function(depoimento) {
+                            depoimento.classList.remove('hidden');
+                        });
+                        this.style.display = 'none'; // Esconde o botão após mostrar os depoimentos adicionais
+                    });
+                </script>
+                
+                
+            
         </section>
     </main>
 
