@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 var swiper = new Swiper(".swiper", {
     cssMode: true,
-    loop: true,
+    loop: false, // Desabilitar o loop globalmente
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -70,4 +70,15 @@ var swiper = new Swiper(".swiper", {
       el: ".swiper-pagination",
     },
     keyboard: true,
-  });
+    on: {
+        click: function() {
+            var lastIndex = this.slides.length - 1;
+            var currentIndex = this.activeIndex;
+            
+            if (currentIndex === lastIndex && this.isEnd) {
+                this.slideTo(0, 0); // Forçar a transição para o primeiro slide
+            }
+        }
+    }
+});
+
