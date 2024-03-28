@@ -2,12 +2,19 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="src/styles/styles.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+
     <title>jc.ccosmetics</title>
     
 </head>
@@ -69,7 +76,7 @@
             <div class="shape"></div>
             <div id="cta">
                 <h1 class="title">
-                    O Cosmético que vai até
+                    O Cosmético que vai até 
                     <span>você</span>
                 </h1>
 
@@ -114,107 +121,43 @@
             <h2 class="section-title">Catálogo</h2>
             <h3 class="section-subtitle">Nossos produtos especiais</h3>
 
-            <div id="dishes">
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
+            <main>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="project-img">
+                          <img src="src/imagens/linha d'leite o'boticario.jpg" alt="Foto 01">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="project-img">
+                          <img src="src/imagens/Linha Cauterização dos Lisos Eudora.jpg" alt="Foto 02">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="project-img">
+                          <img src="src/imagens/linha pessegura o'boticario.jpg" alt="Foto 03">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="project-img">
+                          <img src="src/imagens/linha ilía natura.jpg" alt="Foto 03">
+                        </div>
+                      </div>
                     </div>
-
-                    <img src="src/imagens/linha d'leite o'boticario.jpg" class="dish-image" alt="">
-
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(50+)</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
+                  
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-pagination"></div>
                 </div>
+              </main>
+            
+              <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+              <script src="script.js"></script>
 
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="src/imagens/linha pessegura o'boticario.jpg" class="dish-image" alt="">
-
-
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(30+)</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="src/imagens/Linha Cauterização dos Lisos Eudora.jpg" class="dish-image" alt="">
-
-
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(30+)</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="dish">
-                    <div class="dish-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="src/imagens/linha ilía natura.jpg" class="dish-image" alt="">
-
-
-                    <div class="dish-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(40+)</span>
-                    </div>
-
-                    <div class="dish-price">
-                        <button class="btn-default">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
         </section>
+
+
 
         <section id="testimonials">
             <img src="src/images/chef.png" id="testimonial_chef" alt="">

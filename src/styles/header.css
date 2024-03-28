@@ -5,6 +5,9 @@ header {
     top: 0;
     background-color: var(--color-primary-1);
     z-index: 3;
+
+    /* border: solid 5px green; */
+
 }
 
 #navbar {
@@ -12,32 +15,47 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    /* border: solid 10px red;  */
+
 }
 
 #nav_logo {
     font-size: 24px;
     color: var(--color-primary-6);
+
+  /*  border: solid 10px black; */
 }
 
 #nav_list {
     display: flex;
     list-style: none;
     gap: 48px;
+
+    /* border: solid 10px white;  */
+    
 }
 
 .nav-item a {
     text-decoration: none;
     color: #1d1d1dad;
     font-weight: 600;
+
+    /* border: solid 10px yellow;  */
 }
 
 .nav-item.active a {
     color: var(--color-neutral-1);
     border-bottom: 3px solid var(--color-primary-4);
+
+    /* border: solid 10px blue;  */
 }
 
 #mobile_btn {
     display: none;
+
+    /* border: solid 10px blueviolet;  */
+
 }
 
 #mobile_menu {
@@ -52,6 +70,7 @@ header {
 }
 #mobile_nav_list {
     padding-top: 60px; /* Ajuste conforme necessário */
+    display: inline;
 }
 
 #mobile_nav_list .nav-item {
@@ -113,3 +132,4 @@ header {
         color: #ffffff;
     }
 }
+

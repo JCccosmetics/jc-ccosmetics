@@ -1,40 +1,65 @@
-#menu {
+menu {
+    height: 100vh;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+#swiper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+   /* border: solid 10px green; */
 }
 
-#dishes {
+img {
+    box-shadow: 0 1px 2px #0003;
+    width: 100%;
+    height: 80%;
+  }
+
+
+#swiper-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 24px;
     margin-top: 32px;
+   /* border: solid 10px red; */
+    width: 100%;
 }
 
-.dish {
+.swiper-slide {
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
     gap: 18px;
-    width: 25%;
+    width: 60%;
     padding: 20px;
     background-color: var(--color-neutral-0);
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+
+    height: 80vh;
+   /* border: solid 10px black; */
+} */
+
+.project-img {
+
+    width: 90%; /* Mantém a proporção original da imagem */
+    height: 80vh;
+    display: flex;
+    border: solid 10px white;
 }
 
-.dish-image {
-    max-width: 100%; /* largura máxima */  
-    width: auto; /* Mantém a proporção original da imagem */
-}
-
-
-.dish-heart {
+/*.dish-heart {     //coração
     position: absolute;
     background-color: var(--color-primary-6);
     display: flex;
@@ -47,22 +72,81 @@
     right: -10px;
     top: -10px;
     border-radius: 0px 37.5px 0px 42.5px;
-}
+    border: solid 10px blue;
+} */
 
-.dish-description {
+/*
+.dish-description {    //descrição do produto
     color: #434343;
     text-align: center;
-}
+    border: solid 10px yellow;
+} */
 
+
+/*  estrela de avaliação 
 .dish-rate i {
     color: var(--color-primary-6);
-}
+    border: solid 1px yellow;
+}  */
 
+/*
 .dish-price {
     display: flex;
     align-items: center;
     gap: 20px;
+    border: solid 10px blueviolet;
+} */
+
+.swiper-wrapper {
+    display: flex;
+    flex-direction: row; /* Altera a direção para horizontal */
+    max-width: 90%;
+   /* border: solid red 5px; */
 }
+
+.swiper-slide {
+    flex: 0 0 auto; /* Mantém o tamanho original dos slides */
+    max-width: 90%;
+    /* border: solid 5px black; */
+}
+
+
+/*  --------------------     
+.project-img img {
+    max-width: 80%; /* Ajuste esta porcentagem conforme necessário */
+     /* Mantém a proporção original } */
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 @media screen and (max-width: 1170px) {
     #dishes {
@@ -73,6 +157,7 @@
     .dish {
         width: calc(50% - 12px);
     }
+    
 }
 
 @media screen and (max-width: 600px) {
