@@ -21,7 +21,7 @@ img {
     box-shadow: 0 1px 2px #0003;
     width: 100%;
     height: 80%;
-    border: solid 2px white;
+    /* border: solid 2px white; */
   }
 
 
@@ -57,7 +57,6 @@ img {
     width: 90%; /* Mantém a proporção original da imagem */
     height: 80vh;
     display: flex;
-    border: solid 10px white;
 }
 
 /*.dish-heart {     //coração
@@ -102,13 +101,13 @@ img {
     display: flex;
     flex-direction: row; /* Altera a direção para horizontal */
     max-width: 100%;
-    border: solid red 5px; 
+    /* border: solid red 5px; */
 }
 
 .swiper-slide {
     flex: 0 0 auto; /* Mantém o tamanho original dos slides */
     max-width: 90%;
-     border: solid 5px black;
+     /* border: solid 5px black; */
 }
 
 
