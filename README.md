@@ -1,2 +1,1 @@
-# jc.ccosmetics
- 
+jc.ccosmetics
