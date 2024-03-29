@@ -59,7 +59,7 @@ $(document).ready(function() {
     })
 });
 
-var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".swiper-container", { // Alterei de ".swiper" para ".swiper-container"
     cssMode: true,
     loop: false, // Desabilitar o loop globalmente
     navigation: {
@@ -81,4 +81,3 @@ var swiper = new Swiper(".swiper", {
         }
     }
 });
-
