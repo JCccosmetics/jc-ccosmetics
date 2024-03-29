@@ -59,16 +59,20 @@
     justify-content: end;
     width: 70%;
     z-index: 2;
-  /*  border: solid 10px red; */
+    right: 0;
+
 
 }
 
 #banner img {
-    max-width: 80%; /* largura máxima */  
-    height: auto;
-    border-radius: 100%; /* Torna a imagem redonda */
-    padding-top: 20%;
- /*   border: solid 10px red; */
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 40% 30% 0% 20%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
 
 }
 
@@ -81,6 +85,7 @@
     top: 0;
     right: 0;
     z-index: 1;
+
 }
 
 @media screen and (max-width: 1170px) {
