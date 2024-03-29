@@ -2,22 +2,19 @@
     display: flex;
     min-height: calc(100vh - 91px);
     position: relative;
-   /* border: solid 5px green; */
-
 }
 
 #cta {
-    width: 35%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 28px;
     margin-top: 5%;
-   /* border: solid 10px red; */
 }
 
 #cta .title {
     font-size: 4rem;
-    color: var(--color-neutral-1);;
+    color: var(--color-neutral-1);
 }
 
 #cta .title span {
@@ -54,17 +51,7 @@
 }
 
 #banner {
-    display: flex;
-    align-items: start;
-    justify-content: end;
-    width: 70%;
-    z-index: 2;
-    right: 0;
-
-
-}
-
-#banner img {
+    position: relative;
     width: 50%;
     height: 100%;
     position: absolute;
@@ -72,8 +59,15 @@
     top: 0;
     right: 0;
     z-index: 1;
+}
 
-
+#banner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top right;
+    border-radius: 40% 30% 0% 20%;
 }
 
 .shape {
@@ -85,8 +79,8 @@
     top: 0;
     right: 0;
     z-index: 1;
-
 }
+
 
 @media screen and (max-width: 1170px) {
     #home {
@@ -103,7 +97,7 @@
     #cta {
         width: 100%;
         text-align: center;
-        align-items: center;
+        align-items: left;
     }
 
 }
@@ -112,4 +106,31 @@
     #phone_button button {
         display: none;
     }
+}
+
+@media screen and (max-width: 600px) {
+    /* Defina o ponto de interrupção para dispositivos móveis */
+    #cta {
+        
+        /* border: solid 2px red; /* Ajusta a borda para visualização */
+    }
+
+    #cta .title {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+        text-align: left;
+        word-wrap: break-word; /* Permite a quebra de palavra */
+        width: 60%;
+        /* border: solid 2px black; /* Ajusta a borda para visualização */
+    }
+
+    #cta .title span {
+        font-size: 1.8rem; /* Reduz o tamanho da fonte do span */
+        /* border: solid 2px green; /* Ajusta a borda para visualização */
+    }
+
+    #cta .description {
+        font-size: 0.6rem;
+    }
+
+
 }
