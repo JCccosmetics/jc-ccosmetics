@@ -17,8 +17,11 @@
     color: var(--color-neutral-1);
 }
 
+
+
 #cta .title span {
     color: var(--color-primary-6);
+
 }
 
 #cta .description {
@@ -81,6 +84,11 @@
     z-index: 1;
 }
 
+#banner-mobile{
+    display: none;
+}
+
+
 
 @media screen and (max-width: 1170px) {
     #home {
@@ -100,6 +108,8 @@
         align-items: left;
     }
 
+
+
 }
 
 @media screen and (max-width: 450px) {
@@ -108,29 +118,79 @@
     }
 }
 
+
+
+
 @media screen and (max-width: 600px) {
-    /* Defina o ponto de interrupção para dispositivos móveis */
     #cta {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
         
-        /* border: solid 2px red; /* Ajusta a borda para visualização */
     }
 
-    #cta .title {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+    #cta .title, #cta .description, #cta_buttons {
+        width: 100%; /* Ocupa a largura total disponível */
+
+    }
+
+    .frase {
+        order: 1; /* Garante que a frase vem primeiro */
+        font-size: 1.5rem;
+        width: 70%;
         text-align: left;
-        word-wrap: break-word; /* Permite a quebra de palavra */
-        width: 60%;
-        /* border: solid 2px black; /* Ajusta a borda para visualização */
+
     }
 
-    #cta .title span {
-        font-size: 1.8rem; /* Reduz o tamanho da fonte do span */
-        /* border: solid 2px green; /* Ajusta a borda para visualização */
+    #cta .frase span{
+        font-size: 1.8rem; 
     }
 
-    #cta .description {
+    #banner-mobile {
+        order: 0; /* Coloca o banner no topo */
+        width: 100%; /* Ajusta a largura do banner para ocupar a largura total */
+        display: flex;
+        justify-content: flex-end; /* Alinha o banner à direita */
+        padding-right: 20px; /* Ajusta o espaçamento à direita se necessário */
+
+
+    }
+
+    #banner-mobile img {
+        width: auto; /* Mantém a largura original da imagem */
+        height: auto; /* Ajusta a altura da imagem conforme necessário */
+        
+        
+        width: 50%;
+        position: absolute;
+        border-radius: 40% 30% 0% 20%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+
+    }
+
+    #cta .description{
         font-size: 0.6rem;
     }
+    
+    #cta_buttons {
+        width: 100%;
 
+    }
 
+    /*
+    #cta_buttons a{
+        width: 100%;
+        height: 70%;
+
+        border: solid red;
+    } */ 
+
+    #cta .social-media-buttons {
+
+        order: 3;
+    }
 }
