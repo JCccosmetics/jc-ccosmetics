@@ -81,3 +81,14 @@ var swiper = new Swiper(".swiper-container", { // Alterei de ".swiper" para ".sw
         }
     }
 });
+
+function sairDoSite() {
+    try {
+        window.close(); // Tenta fechar a aba do navegador
+    } catch (e) {
+        console.log("Não foi possível fechar a aba automaticamente.");
+    }
+    // Como alternativa, redireciona o usuário para outro site
+    // Isso pode ser útil se você não pode fechar a aba
+    window.location.href = 'https://www.google.com';
+}
