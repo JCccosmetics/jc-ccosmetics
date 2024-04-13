@@ -113,7 +113,7 @@ header {
 
     #mobile_menu.active {
         display: block;
-        background-color: #ebccc3;
+        background-color:  #943c93;
         height: 100vh;
         position: fixed;
 
@@ -139,7 +139,7 @@ header {
         padding:15% 0% 12% 0% ;
         margin-top: 0%;
 
-        background-color:  #ebccc3;
+        background-color:   #943c93;
         height: 10%;
 
     }
