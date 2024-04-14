@@ -7,14 +7,14 @@
 
 :root {
     --color-primary-1: #943c93;
-    --color-primary-2: #ffe8b4;
-    --color-primary-3: #f8d477;
+    --color-primary-2: black    ;
+    --color-primary-3: #eda7ea    ;
     --color-primary-4: #ffe100;
     --color-primary-5: #ffcb45;
     --color-primary-6: white;
 
-    --color-neutral-0: #eae1d9    ;
-    --color-neutral-1: #1d1d1d;
+    --color-neutral-0: #bb6bb6    ;
+    --color-neutral-1: black;
 }
 
 * {
