@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #943c93;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 26px;
+    text-align: center;
+    color: black;
+}
+
+.review {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 20px;
+}
+
+.comment {
+    font-style: italic;
+    color: black;
+}
+
+.author {
+    text-align: right;
+    color: black;
+    font-size: 14px;
+    margin-top: 5px;
+}
