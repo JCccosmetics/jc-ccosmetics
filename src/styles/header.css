@@ -1,157 +1,115 @@
-header {
+/* ======================
+   HEADER
+   ====================== */
+   header {
     width: 100%;
     padding: 28px 8%;
     position: sticky;
     top: 0;
     background-color: var(--color-primary-1);
-    z-index: 3;
-
-
-}
-
-#navbar {
-    width: 100%;
+    z-index: 30;
+  }
+  
+  #navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-     /* border: solid 10px red; */ 
-
-}
-
-#nav_logo {
+  }
+  
+  #nav_logo {
     font-size: 24px;
     color: var(--color-primary-6);
-
-  /*  border: solid 10px black; */
-}
-
-#nav_list {
+  }
+  
+  /* menu desktop */
+  #nav_list {
     display: flex;
     list-style: none;
     gap: 48px;
-
-    /* border: solid 10px white;  */
-    
-}
-
-.nav-item a {
+  }
+  
+  .nav-item a {
     text-decoration: none;
     color: #1d1d1dad;
     font-weight: 600;
-
-    /* border: solid 10px yellow;  */
-}
-
-.nav-item.active a {
+  }
+  
+  .nav-item.active a {
     color: var(--color-neutral-1);
     border-bottom: 3px solid var(--color-primary-4);
-
-    /* border: solid 10px blue;  */
-}
-
-#mobile_btn {
-    display: none;
-
-    /* border: solid 10px blueviolet;  */
-
-}
-
-#mobile_menu {
-    display: none;
+  }
+  
+  /* ======================
+     MENU MÓVEL (SLIDE-IN)
+     ====================== */
+  /* botão hambúrguer */
+  #mobile_btn {
+    display: none;       /* só vira bloco em media query */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 40;
+  }
+  
+  /* container do menu móvel, inicialmente fora da tela */
+  #mobile_menu {
     position: fixed;
     top: 0;
-    right: 0; /* Ajuste para mover o menu para o lado direito */
-    width: 250px;
-    height: 100%;
+    right: 0;
+    width: 75vw;         /* ocupa 75% da tela */
+    max-width: 300px;    /* mas não mais que 300px */
+    height: 100vh;
     background-color: var(--color-primary-1);
-    z-index: 2;
-
-}
-#mobile_nav_list {
-    padding-top: 60px; /* Ajuste conforme necessário */
-    display: inline;
-}
-
-#mobile_nav_list .nav-item {
+  
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 35;
+    padding-top: 60px;   /* evita ficar sob o header */
+  }
+  
+  #mobile_menu.active {
+    transform: translateX(0);
+  }
+  
+  /* lista de itens */
+  #mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  #mobile_nav_list .nav-item {
     list-style: none;
-    margin-bottom: 20px; /* Ajuste conforme necessário */
-}
-
-#mobile_nav_list .nav-item a {
-    text-decoration: none;
+  }
+  
+  #mobile_nav_list .nav-item a,
+  #mobile_nav_list .nav-item button {
     color: var(--color-primary-6);
-    font-size: 18px; /* Ajuste conforme necessário */
-}
-
-#mobile_nav_list .nav-item.active a {
-    color: var(--color-neutral-1);
-}
-
-#mobile_btn {
-    display: none;
-}
-
-@media screen and (max-width: 1170px) {
+    font-size: 1.1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: .5rem 0;
+    width: 100%;
+  }
+  
+  /* ======================
+     RESPONSIVIDADE
+     ====================== */
+  @media screen and (max-width: 1170px) {
+    /* esconde menu desktop */
     #nav_list,
     #navbar .btn-default {
-        display: none;
+      display: none;
     }
-
+    /* mostra hambúrguer */
     #mobile_btn {
-        display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        cursor: pointer;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 3;
-
+      display: block;
+      position: absolute;
+      top: 24px;
+      right: 24px;
     }
-
-    #mobile_menu.active {
-        display: block;
-        background-color:  #943c93;
-        height: 100vh;
-        position: fixed;
-
-        /* border: solid 2px blue;  */
-    }
-
-    #mobile_nav_list {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        margin: 0;
-        padding: 5% 0% 5% 0%;
-      /* background-color: red;  */  
-
-
-    }
-
-    #mobile_nav_list .nav-item {
-        margin-bottom: 0;
-        color: #ffffff;
-        text-align: right;
-        align-items: top;
-        padding:15% 0% 12% 0% ;
-        margin-top: 0%;
-
-        background-color:   #943c93;
-        height: 10%;
-
-    }
-
-    #mobile_nav_list .nav-item a{
-        padding-right: 10%;
-        align-items: center;
-
-    }
-
-    #mobile_nav_list .nav-item>:hover{
-        color: black;
-    }
-}
-
+  }
+  
