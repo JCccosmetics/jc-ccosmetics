@@ -98,3 +98,9 @@ section {
 
 
 }
+
+/* Esconde as setas do Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}

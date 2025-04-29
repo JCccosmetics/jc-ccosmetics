@@ -53,6 +53,9 @@
     color: var(--color-primary-6);
 }
 
+
+
+
 @media screen and (max-width: 1170px) {
     #testimonials {
         flex-direction: column;
@@ -88,3 +91,22 @@
         flex-direction: column;
     }
 } 
+
+.feedback-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ccc; /* fundo neutro */
+  }
+  
+  /* Avatar genérico */
+  .avatar-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    color: #888;
+    font-size: 2rem;
+  }
+  
