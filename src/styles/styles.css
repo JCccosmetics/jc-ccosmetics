@@ -104,3 +104,42 @@ section {
 .swiper-button-prev {
   display: none !important;
 }
+
+/* ============================= */
+/*  QR Code no menu móvel (rodapé) */
+/* ============================= */
+#mobile_menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* empurra o QR Code para baixo */
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+  
+  .mobile-qr {
+    text-align: center;
+  }
+  
+  .qr-prompt {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .qr-contact {
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .qr-contact i {
+    margin-left: 0.5rem;
+  }
+  
+  .mobile-qr img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  
