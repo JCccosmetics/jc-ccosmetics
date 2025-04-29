@@ -1,94 +1,67 @@
 $(document).ready(function() {
+    // Toggle do menu móvel
     $('#mobile_btn').on('click', function () {
-        $('#mobile_menu').toggleClass('active');
-        $('#mobile_btn').find('i').toggleClass('fa-x');
+      $('#mobile_menu').toggleClass('active');
+      $('#mobile_btn').find('i').toggleClass('fa-x');
     });
-
+  
     const sections = $('section');
     const navItems = $('.nav-item');
-
+    const header = $('header');
+  
+    // Destaque do item de nav conforme scroll
     $(window).on('scroll', function () {
-        const header = $('header');
-        const scrollPosition = $(window).scrollTop() - header.outerHeight();
-
-        let activeSectionIndex = 0;
-
-        if (scrollPosition <= 0) {
-            header.css('box-shadow', 'none');
-        } else {
-            header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0, 0.1');
+      const scrollPosition = $(window).scrollTop() - header.outerHeight();
+  
+      // Sombra do header
+      if (scrollPosition <= 0) {
+        header.css('box-shadow', 'none');
+      } else {
+        header.css('box-shadow', '0 2px 5px rgba(0,0,0,0.1)');
+      }
+  
+      // Encontrar seção ativa
+      sections.each(function(i) {
+        const sectionTop = $(this).offset().top - header.outerHeight();
+        const sectionBottom = sectionTop + $(this).outerHeight();
+  
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          navItems.removeClass('active');
+          $(navItems[i]).addClass('active');
+          return false; // sai do each
         }
-
-        sections.each(function(i) {
-            const section = $(this);
-            const sectionTop = section.offset().top - 96;
-            const sectionBottom = sectionTop+ section.outerHeight();
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                activeSectionIndex = i;
-                return false;
-            }
-        })
-
-        navItems.removeClass('active');
-        $(navItems[activeSectionIndex]).addClass('active');
+      });
     });
-
-    ScrollReveal().reveal('#cta', {
-        origin: 'left',
-        duration: 2000,
-        distance: '20%'
-    });
-
-    ScrollReveal().reveal('.dish', {
-        origin: 'left',
-        duration: 2000,
-        distance: '20%'
-    });
-
-    ScrollReveal().reveal('#testimonial_chef', {
-        origin: 'left',
-        duration: 1000,
-        distance: '20%'
-    })
-
-    ScrollReveal().reveal('.feedback', {
-        origin: 'right',
-        duration: 1000,
-        distance: '20%'
-    })
-});
-
-var swiper = new Swiper(".swiper-container", { // Alterei de ".swiper" para ".swiper-container"
-    cssMode: true,
-    loop: false, // Desabilitar o loop globalmente
+  
+    // ScrollReveal (se carregado)
+    if (window.ScrollReveal) {
+      ScrollReveal().reveal('#cta',            { origin: 'left',  distance: '20%', duration: 2000 });
+      ScrollReveal().reveal('.dish',           { origin: 'left',  distance: '20%', duration: 2000 });
+      ScrollReveal().reveal('#testimonial_chef',{ origin: 'left',  distance: '20%', duration: 1000 });
+      ScrollReveal().reveal('.feedback',       { origin: 'right', distance: '20%', duration: 1000 });
+    }
+  });
+  
+// Inicialização do Swiper com loop infinito e autoplay (sem cssMode)
+var swiper = new Swiper('.swiper-container', {
+    loop: true,                // loop contínuo
+    autoplay: {
+      delay: 3000,             // troca a cada 3s
+      disableOnInteraction: false
+    },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: '.swiper-pagination'
     },
-    keyboard: true,
-    on: {
-        click: function() {
-            var lastIndex = this.slides.length - 1;
-            var currentIndex = this.activeIndex;
-            
-            if (currentIndex === lastIndex && this.isEnd) {
-                this.slideTo(0, 0); // Forçar a transição para o primeiro slide
-            }
-        }
-    }
-});
-
-function sairDoSite() {
-    try {
-        window.close(); // Tenta fechar a aba do navegador
-    } catch (e) {
-        console.log("Não foi possível fechar a aba automaticamente.");
-    }
-    // Como alternativa, redireciona o usuário para outro site
-    // Isso pode ser útil se você não pode fechar a aba
+    keyboard: true
+  });
+  
+  
+  // Função sair
+  function sairDoSite() {
     window.location.href = 'https://www.google.com';
-}
+  }
+  
